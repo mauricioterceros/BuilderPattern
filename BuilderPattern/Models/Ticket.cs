@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    class Ticket
+    class Ticket : Product
     {
         public string Name { get; set; } //DB
         public int Price { get; set; } //DB        

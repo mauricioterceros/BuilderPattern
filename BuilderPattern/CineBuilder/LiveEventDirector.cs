@@ -15,7 +15,7 @@ namespace BuilderPattern
             liveBuilder = builder;
         }
 
-        public void Construct(Ticket ticket)
+        public void Construct(Product ticket)
         {
             liveBuilder.Init();
             //liveBuilder.SetPrice(ticket);

@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    class DBTicket
+    class DBProduct
     {
-        private static DBTicket _instance;
-        public static DBTicket Instance
+        private static DBProduct _instance;
+        public static DBProduct Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new DBTicket();
+                    _instance = new DBProduct();
                 }
                 return _instance;
             }
         }
-        private DBTicket() { }
+        private DBProduct() { }
 
-        public List<Ticket> GetDBTickets()
+        public List<Product> GetDBTickets()
         {
-            List<Ticket> dbTickets = new List<Ticket>();
-            Ticket ticket1 = new Ticket() { Name = "Evento 1", IsLiveEvent = true, Language = "English", Price = 20, Public = "All" };
-            Ticket ticket2 = new Ticket() { Name = "Evento 2", IsLiveEvent = false, Language = "English", Price = 30, Public = "All" };
-            Ticket ticket3 = new Ticket() { Name = "Evento 3", IsLiveEvent = true, Language = "English", Price = 40, Public = "+14" };
-            Ticket ticket4 = new Ticket() { Name = "Evento 4", IsLiveEvent = false, Language = "Spanish", Price = 50, Public = "PG" };
-            Ticket ticket5 = new Ticket() { Name = "Evento 5", IsLiveEvent = true, Language = "English", Price = 60, Public = "+18" };
+            List<Product> dbTickets = new List<Product>();
+            Product ticket1 = new Ticket() { Name = "Product 1", IsLiveEvent = true, Language = "English", Price = 20, Public = "All" };
+            Product ticket2 = new Ticket() { Name = "Product 2", IsLiveEvent = false, Language = "English", Price = 30, Public = "All" };
+            Product ticket3 = new Ticket() { Name = "Product 3", IsLiveEvent = true, Language = "English", Price = 40, Public = "+14" };
+            Product ticket4 = new Ticket() { Name = "Product 4", IsLiveEvent = false, Language = "Spanish", Price = 50, Public = "PG" };
+            Product ticket5 = new Ticket() { Name = "Prodcut 5", IsLiveEvent = true, Language = "English", Price = 60, Public = "+18" };
             dbTickets.Add(ticket1);
             dbTickets.Add(ticket2);
             dbTickets.Add(ticket3);

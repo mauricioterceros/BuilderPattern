@@ -10,29 +10,23 @@ namespace BuilderPattern
     {
         static void Main(string[] args)
         {
-            List<TicketView> ticketViews = new List<TicketView>();
-            List<Ticket> dbTickets = DBTicket.Instance.GetDBTickets();
+            List<Product> dbTickets = DBProduct.Instance.GetDBTickets(); //any product: ebooks, tickets
+
+            List<ProductView> ticketViewsDesktop = new List<ProductView>();
+            List<ProductView> ticketViewsTablet = new List<ProductView>();
+            List<ProductView> ticketViewsMobile = new List<ProductView>();
+            
+
+            IProductFactory ticketFactoryView = new TicketViewFactory();
 
             foreach (Ticket dbTicket in dbTickets)
             {
-                ticketViews.Add(TicketViewFactory.Build(dbTicket));
+                ticketViewsDesktop.Add(ticketFactoryView.getDesktopView(dbTicket));
+                ticketViewsTablet.Add(ticketFactoryView.getTabletView(dbTicket));
+                ticketViewsMobile.Add(ticketFactoryView.getMobileView(dbTicket));
             }
 
             Console.ReadKey();
-            /*
-            Ticket concertTicket = new Ticket();
-            concertTicket.Price = 20;
-            concertTicket.IsLiveEvent = true;
-            concertTicket.Language = "English";
-            concertTicket.EventName = "Guns and Roses";
-            concertTicket.Public = "ALL";
-
-            Ticket cinemaTicket = new Ticket();
-            concertTicket.Price = 20;
-            concertTicket.IsLiveEvent = false;
-            concertTicket.Language = "English";
-            concertTicket.EventName = "DeadPool 2";
-            concertTicket.Public = "+14";*/
         }
     }
 }

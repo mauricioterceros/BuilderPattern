@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BuilderPattern
 {
-    class TicketView
+    class ProductView
     {
         public string EventName { get; set; } //DB
         public int Price { get; set; } //DB        
@@ -18,7 +18,7 @@ namespace BuilderPattern
         public string Room { get; set; } 
         public string Hour { get; set; } 
 
-        public TicketView() { }
+        public ProductView() { }
 
         public override String ToString()
         {

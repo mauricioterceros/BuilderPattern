@@ -9,10 +9,10 @@ namespace BuilderPattern
     interface ITicketBuilder
     {
         void Init();
-        void SetPrice(Ticket ticket);
-        void SetLanguage(Ticket ticket);
-        void SetPublic(Ticket ticket);
-        void SetIsLive(Ticket ticket);
-        void SetEventName(Ticket ticket);
+        void SetPrice(Product ticket);
+        void SetLanguage(Product ticket);
+        void SetPublic(Product ticket);
+        void SetIsLive(Product ticket);
+        void SetEventName(Product ticket);
     }
 }

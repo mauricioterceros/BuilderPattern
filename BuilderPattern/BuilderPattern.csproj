@@ -43,17 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CinemaTicketBuilder.cs" />
-    <Compile Include="ConcertTicketBuilder.cs" />
+    <Compile Include="CineBuilder\CinemaTicketBuilder.cs" />
+    <Compile Include="ConcertBuilder\ConcertTicketBuilder.cs" />
     <Compile Include="DBTickets.cs" />
+    <Compile Include="Factories\IProductFactory.cs" />
     <Compile Include="ITicketBuilder.cs" />
-    <Compile Include="LiveEventDirector.cs" />
-    <Compile Include="NonLiveEventDirector.cs" />
+    <Compile Include="CineBuilder\LiveEventDirector.cs" />
+    <Compile Include="ConcertBuilder\NonLiveEventDirector.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ticket.cs" />
-    <Compile Include="TicketViewFactory.cs" />
-    <Compile Include="TicketView.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Factories\TicketViewFactory.cs" />
+    <Compile Include="ViewModels\TicketView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
